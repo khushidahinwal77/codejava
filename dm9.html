@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre> import java.awt.*;
+        import java.awt.event.*;
+        class FrameSwitcher extends Frame {
+          Button btn1 = new Button("Go to Frame 2");
+          FrameSwitcher(){
+            add(btn1);
+            setLayout(new FlowLayout());
+            setSize(300,200);
+            setVisible(true);
+            btn1.addActionListener(new ActionListener(){
+              public void actionPerformed(ActionEvent e){
+                new SecondFrame();
+                dispose();
+              }
+              });
+          }
+          public static void main(String ap[]){
+            new FrameSwitcher();
+          }
+          }
+        class SecondFrame extends Frame {
+          Button btn2 = new Button("Back to Frame 1");
+          SecondFrame(){
+            add(btn2);
+            setLayout(new FlowLayout());
+            setSize(300,200);
+            setVisible(true);
+            btn2.addActionListener(new ActionListener(){
+              public void actionPerformed(ActionEvent e){
+                new FrameSwitcher();
+                dispose();
+              }
+              });
+          }
+          }</pre>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>import java.awt.*;
+        import java.awt.event.*;
+        
+        class myFrame extends Frame {
+        TextField tf1 = new TextField();
+        myFrame() {
+        tf1.addKeyListener(new KeyAdapter() {
+        public void keyTyped(KeyEvent e) {
+        char c = e.getKeyChar();
+        System.out.println("Key Typed: " + c);
+        }
+        });
+        add(tf1);
+        setLayout(new FlowLayout());
+        setSize(300, 100);
+        setTitle("KeyBoardEvent");
+        setVisible(true);
+        }
+        public static void main(String ap[]) {
+        myFrame f1 = new myFrame();
+        }
+        }</pre>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre> import java.awt.*;
+        import java.awt.event.*;
+        class CheckBoxRadioButtonExample extends Frame {
+          Checkbox checkbox1 = new Checkbox("Option 1");
+          Checkbox checkbox2 = new Checkbox("Option 2");
+          CheckboxGroup group = new CheckboxGroup();
+          Checkbox radio1 = new Checkbox("Radio 1", group, false);
+          Checkbox radio2 = new Checkbox("Radio 2", group, false);
+          Button btn = new Button("Submit");
+          CheckBoxRadioButtonExample(){
+            add(checkbox1);
+            add(checkbox2);
+            add(radio1);
+            add(radio2);
+            add(btn);
+            setLayout(new FlowLayout());
+            setSize(400,200);
+            setVisible(true);
+            btn.addActionListener(new ActionListener(){
+              public void actionPerformed(ActionEvent e){
+                System.out.println("Checkbox1: " + checkbox1.getState());
+                System.out.println("Checkbox2: " + checkbox2.getState());
+                System.out.println("Selected Radio: " + group.getSelectedCheckbox().getLabel());
+                }
+              });
+          }
+          public static void main(String ap[]){
+            new CheckBoxRadioButtonExample();
+          }
+          }</pre>
+</body>
+</html>

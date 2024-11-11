@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>question7</h1>
+    <pre>
+        interface Sortable {
+            void sort(int arr[]);
+            }
+            
+            class BubbleSort implements Sortable {
+            public void sort(int arr[]) {
+            for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+            int temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+            }
+            }
+            }
+            }
+            }
+            
+            class SelectionSort implements Sortable {
+            
+            public void sort(int arr[]) {
+            for (int i = 0; i < arr.length - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[minIndex]) {
+            minIndex = j;
+            }
+            }
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+            }
+            }
+            }
+            
+            
+            class Main {
+            public static void main(String[] args) {
+            int array[] = {64, 34, 25, 12, 22, 11, 90};
+            int i;
+            
+            // Using BubbleSort
+            BubbleSort b = new BubbleSort();
+            System.out.println("Array values:");
+            for(i=0;i<array.length;i++){
+            System.out.println(array[i]);
+            }
+            b.sort(array);
+            System.out.println("Array values after Bubble Sort:");
+            for(i=0;i<array.length;i++){
+            System.out.println(array[i]);
+            }
+            
+            
+            int array2[]= {64, 34, 25, 12, 22, 11, 90};
+            
+            
+            SelectionSort s = new SelectionSort();
+            System.out.println("\nArray before Selection Sort:");
+            for(i=0;i<array2.length;i++){
+            System.out.println(array[i]);
+            }
+            s.sort(array2);
+            System.out.println("Array after Selection Sort:");
+            for(i=0;i<array2.length;i++){
+            System.out.println(array[i]);
+            }
+            }
+            
+            }
+        
+    </pre>
+    
+</body>
+</html>

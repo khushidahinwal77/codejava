@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <pre>import java.awt.*;
+        import java.awt.event.*;
+        class ListBoxExample extends Frame {
+          List list = new List();
+          Button btn = new Button("Show Selected Items");
+          ListBoxExample(){
+            list.add("Item 1");
+            list.add("Item 2");
+            list.add("Item 3");
+            list.add("Item 4");
+            list.setMultipleMode(true);
+            add(list);
+            add(btn);
+            setLayout(new FlowLayout());
+            setSize(400,300);
+            setVisible(true);
+            btn.addActionListener(new ActionListener(){
+              public void actionPerformed(ActionEvent e){
+                String[] selectedItems = list.getSelectedItems();
+                for(String item : selectedItems){
+                  System.out.println(item);
+                }
+              }
+              });
+          }
+          public static void main(String ap[]){
+            new ListBoxExample();
+          }
+          }</pre>
+</body>
+</html>

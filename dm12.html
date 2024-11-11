@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>import java.awt.*;
+        import java.awt.event.*;
+        class DisplayMessage extends Frame {
+          Button btn = new Button("Show Message");
+          DisplayMessage(){
+            add(btn);
+            setLayout(new FlowLayout());
+            setSize(300,200);
+            setVisible(true);
+            btn.addActionListener(new ActionListener(){
+              public void actionPerformed(ActionEvent e){
+                Frame messageFrame = new Frame();
+                Label label = new Label("Hello, Welcome to the new Frame!");
+                messageFrame.add(label);
+                messageFrame.setSize(400,200);
+                messageFrame.setVisible(true);
+              }
+              });
+          }
+          public static void main(String ap[]){
+            new DisplayMessage();
+          }
+          }</pre>
+</body>
+</html>

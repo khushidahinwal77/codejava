@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>import java.awt.*;
+        import java.awt.event.*;
+        
+        class myFrame extends Frame {
+        TextArea textArea = new TextArea("Enter text here...");
+        TextField passwordField = new TextField("password", 20);
+        myFrame() {
+        add(textArea);
+        add(passwordField);
+        setLayout(new FlowLayout());
+        setSize(400, 200);
+        setTitle("Text Area and Password Field");
+        setVisible(true);
+        }
+        public static void main(String ap[]) {
+        myFrame f1 = new myFrame();
+        }
+        }</pre>
+</body>
+</html>

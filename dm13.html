@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>import java.awt.*;
+        import java.awt.event.*;
+        class CloseFrameExample extends Frame {
+          CloseFrameExample(){
+            setSize(400,200);
+            setVisible(true);
+            addWindowListener(new WindowAdapter(){
+              public void windowClosing(WindowEvent we){
+                System.exit(0);
+              }
+              });
+          }
+          public static void main(String ap[]){
+            new CloseFrameExample();
+          }
+          }</pre>
+</body>
+</html>

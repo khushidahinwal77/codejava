@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>import java.awt.*;
+        import java.awt.event.*;
+        
+        class myFrame extends Frame {
+        CheckboxGroup group = new CheckboxGroup();
+        Checkbox radioButton1 = new Checkbox("Option 1", group, false);
+        Checkbox radioButton2 = new Checkbox("Option 2", group, false);
+        Label label = new Label("Selected Option: ");
+        myFrame() {
+        radioButton1.addItemListener(new ItemListener() {
+        public void itemStateChanged(ItemEvent e) {
+        label.setText("Selected Option: " + radioButton1.getLabel());
+        }
+        });
+        radioButton2.addItemListener(new ItemListener() {
+        public void itemStateChanged(ItemEvent e) {
+        label.setText("Selected Option: " + radioButton2.getLabel());
+        }
+        });
+        add(radioButton1);
+        add(radioButton2);
+        add(label);
+        setLayout(new FlowLayout());
+        setSize(300, 200);
+        setTitle("Radio Buttons");
+        setVisible(true);
+        }
+        public static void main(String ap[]) {
+        myFrame f1 = new myFrame();
+        }
+        }</pre>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>question5</h1>
+    <pre>class BankAccount {
+        double balance;
+        void deposit(double amount) {
+        balance += amount;
+        }
+        void withdraw(double amount) {
+        balance -= amount;
+        }
+        }
+        
+        class SavingsAccount extends BankAccount {
+        void withdraw(double amount) {
+        if (balance - amount < 100) {
+        System.out.println("Cannot withdraw, balance would be below 100");
+        } else {
+        super.withdraw(amount);
+        }
+        }
+        }
+        
+        class Main {
+        public static void main(String ap[]) {
+        SavingsAccount sa = new SavingsAccount();
+        sa.deposit(500);
+        sa.withdraw(450);
+        sa.withdraw(10);
+        }
+        }</pre>
+</body>
+</html>

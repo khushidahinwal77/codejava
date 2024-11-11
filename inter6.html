@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>question6</h1>
+    <pre>
+
+        interface Drawable{
+            void draw();
+            }
+            class Circle implements Drawable{
+            public void draw(){
+            System.out.println("Circle has been drawn");
+            }
+            }
+            class Rectangle implements Drawable{
+            public void draw(){
+            System.out.println("Rectangle has been drawn");
+            }
+            }
+            class Triangle implements Drawable{
+            public void draw(){
+            System.out.println("Triangle has been drawn");
+            }
+            }
+            class Main{
+            public static void main(String ap[]){
+            Circle c = new Circle();
+            Triangle t = new Triangle();
+            Rectangle r = new Rectangle();
+            
+            c.draw();
+            t.draw();
+            r.draw();
+            }
+            }  
+    </pre>
+    
+</body>
+</html>

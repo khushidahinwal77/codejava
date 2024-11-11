@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>import java.awt.*;
+        import java.awt.event.*;
+        
+        class myFrame extends Frame {
+        myFrame() {
+        addMouseListener(new MouseAdapter() {
+        public void mouseClicked(MouseEvent e) {
+        System.out.println("Mouse clicked at: " + e.getX() + ", " + e.getY());
+        }
+        });
+        setLayout(new FlowLayout());
+        setSize(300, 200);
+        setTitle("MouseEvent");
+        setVisible(true);
+        }
+        public static void main(String ap[]) {
+        myFrame f1 = new myFrame();
+        }
+        }</pre>
+</body>
+</html>

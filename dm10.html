@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre> import java.awt.*;
+        import java.awt.event.*;
+        class ButtonWithBorder extends Frame {
+          Button btn = new Button("Click Me");
+          ButtonWithBorder(){
+            btn.setBounds(50, 50, 100, 30);
+            btn.setBackground(Color.YELLOW);
+            btn.setForeground(Color.BLUE);
+            btn.setFont(new Font("Arial", Font.BOLD, 14));
+            setSize(300,200);
+            setVisible(true);
+            add(btn);
+            setLayout(null);
+          }
+          public static void main(String ap[]){
+            new ButtonWithBorder();
+          }
+          }</pre>
+</body>
+</html>
