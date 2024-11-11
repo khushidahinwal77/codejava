@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <pre>import java.awt.*;
+    class ChoiceFlowLayout extends Frame {
+      Choice ch = new Choice();
+      ChoiceFlowLayout(){
+        ch.add("Option 1");
+        ch.add("Option 2");
+        ch.add("Option 3");
+        setLayout(new FlowLayout());
+        add(ch);
+        setSize(300,200);
+        setVisible(true);
+      }
+      public static void main(String ap[]){
+        new ChoiceFlowLayout();
+      }
+      }</pre> 
+</body>
+</html>

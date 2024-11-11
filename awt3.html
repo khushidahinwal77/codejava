@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre> import java.awt.*;
+        class ButtonBorderLayout extends Frame {
+          Button btn1 = new Button("North");
+          Button btn2 = new Button("East");
+          Button btn3 = new Button("West");
+          Button btn4 = new Button("South");
+          Button btn5 = new Button("Center");
+          ButtonBorderLayout(){
+            setLayout(new BorderLayout());
+            add(btn1, BorderLayout.NORTH);
+            add(btn2, BorderLayout.EAST);
+            add(btn3, BorderLayout.WEST);
+            add(btn4, BorderLayout.SOUTH);
+            add(btn5, BorderLayout.CENTER);
+            setSize(400,300);
+            setVisible(true);
+          }
+          public static void main(String ap[]){
+            new ButtonBorderLayout();
+          }
+          }</pre>
+</body>
+</html>

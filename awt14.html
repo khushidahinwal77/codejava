@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  import java.awt.*;
+  import java.util.*;
+  class AvailableFonts extends Frame {
+    AvailableFonts(){
+      String[] fonts = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+      setLayout(new FlowLayout());
+      setSize(400,300);
+      setVisible(true);
+      for(String font : fonts){
+        Label label = new Label(font);
+        add(label);
+      }
+    }
+    public static void main(String ap[]){
+      new AvailableFonts();
+    }
+    }
+</body>
+</html>

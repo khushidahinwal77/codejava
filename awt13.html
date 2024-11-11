@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    import java.awt.*;
+    class CheckboxGroupCustomLayout extends Frame {
+      CheckboxGroup group = new CheckboxGroup();
+      Checkbox cb1 = new Checkbox("Option 1", group, false);
+      Checkbox cb2 = new Checkbox("Option 2", group, false);
+      Checkbox cb3 = new Checkbox("Option 3", group, false);
+      CheckboxGroupCustomLayout(){
+        setLayout(new GridLayout(3, 1));
+        add(cb1);
+        add(cb2);
+        add(cb3);
+        setSize(300,200);
+        setVisible(true);
+      }
+      public static void main(String ap[]){
+        new CheckboxGroupCustomLayout();
+      }
+      }
+</body>
+</html>

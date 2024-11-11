@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre> import java.awt.*;
+        import java.awt.event.*;
+        class Calculator extends Frame implements ActionListener {
+          TextField tf = new TextField();
+          Button b1 = new Button("1");
+          Button b2 = new Button("2");
+          Button b3 = new Button("3");
+          Button b4 = new Button("4");
+          Button b5 = new Button("5");
+          Button b6 = new Button("6");
+          Button b7 = new Button("7");
+          Button b8 = new Button("8");
+          Button b9 = new Button("9");
+          Button b0 = new Button("0");
+          Button bAdd = new Button("+");
+          Button bSub = new Button("-");
+          Button bMul = new Button("*");
+          Button bDiv = new Button("/");
+          Button bEq = new Button("=");
+          Button bClr = new Button("C");
+          String input = "";
+          Calculator(){
+            setLayout(new GridLayout(5, 4));
+            add(tf);
+            add(b1);
+            add(b2);
+            add(b3);
+            add(b4);
+            add(b5);
+            add(b6);
+            add(b7);
+            add(b8);
+            add(b9);
+            add(b0);
+            add(bAdd);
+            add(bSub);
+            add(bMul);
+            add(bDiv);
+            add(bEq);
+            add(bClr);
+            b1.addActionListener(this);
+            b2.addActionListener(this);
+            b3.addActionListener(this);
+            b4.addActionListener(this);
+            b5.addActionListener(this);
+            b6.addActionListener(this);
+            b7.addActionListener(this);
+            b8.addActionListener(this);
+            b9.addActionListener(this);
+            b0.addActionListener(this);
+            bAdd.addActionListener(this);
+            bSub.addActionListener(this);
+            bMul.addActionListener(this);
+            bDiv.addActionListener(this);
+            bEq.addActionListener(this);
+            bClr.addActionListener(this);
+          }
+          public void actionPerformed(ActionEvent e){
+            if(e.getSource() == b1){ input += "1"; tf.setText(input);}
+            if(e.getSource() == b2){ input += "2"; tf.setText(input);}
+            if(e.getSource() == b3){ input += "3"; tf.setText(input);}
+            if(e.getSource() == b4){ input += "4"; tf.setText(input);}
+            if(e.getSource() == b5){ input += "5"; tf.setText(input);}
+            if(e.getSource() == b6){ input += "6"; tf.setText(input);}
+            if(e.getSource() == b7){ input += "7"; tf.setText(input);}
+            if(e.getSource() == b8){ input += "8"; tf.setText(input);}
+            if(e.getSource() == b9){ input += "9"; tf.setText(input);}
+            if(e.getSource() == b0){ input += "0"; tf.setText(input);}
+            if(e.getSource() == bAdd){ input += "+"; tf.setText(input);}
+            if(e.getSource() == bSub){ input += "-"; tf.setText(input);}
+            if(e.getSource() == bMul){ input += "*"; tf.setText(input);}
+            if(e.getSource() == bDiv){ input += "/"; tf.setText(input);}
+            if(e.getSource() == bClr){ input = ""; tf.setText(input);}
+            if(e.getSource() == bEq){ try{ input = evaluateExpression(input); tf.setText(input);} catch (Exception ex){ tf.setText("Error"); input = "";} }
+          }
+          public static void main(String ap[]){
+            new Calculator();
+          }
+          }</pre>
+</body>
+</html>

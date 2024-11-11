@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre> import java.awt.*;
+        class ListCustomLayout extends Frame {
+          List lst = new List();
+          ListCustomLayout(){
+            lst.add("Item 1");
+            lst.add("Item 2");
+            lst.add("Item 3");
+            setLayout(new GridLayout(1, 1));
+            add(lst);
+            setSize(300,200);
+            setVisible(true);
+          }
+          public static void main(String ap[]){
+            new ListCustomLayout();
+          }
+          }</pre>
+</body>
+</html>
